@@ -15,6 +15,7 @@
 		5B9CC8E62C25E224004E7A72 /* ScottishPowerTechnicalTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9CC8E52C25E224004E7A72 /* ScottishPowerTechnicalTestUITestsLaunchTests.swift */; };
 		5B9CC8F72C25E2F1004E7A72 /* RockTracksListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9CC8F62C25E2F1004E7A72 /* RockTracksListViewModel.swift */; };
 		5B9CC8F92C25E302004E7A72 /* RockTracksListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9CC8F82C25E302004E7A72 /* RockTracksListView.swift */; };
+		5B9CC8FC2C25E3C8004E7A72 /* TracksResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9CC8FB2C25E3C8004E7A72 /* TracksResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		5B9CC8E52C25E224004E7A72 /* ScottishPowerTechnicalTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScottishPowerTechnicalTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5B9CC8F62C25E2F1004E7A72 /* RockTracksListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RockTracksListViewModel.swift; sourceTree = "<group>"; };
 		5B9CC8F82C25E302004E7A72 /* RockTracksListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RockTracksListView.swift; sourceTree = "<group>"; };
+		5B9CC8FB2C25E3C8004E7A72 /* TracksResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 		5B9CC8C72C25E222004E7A72 /* ScottishPowerTechnicalTest */ = {
 			isa = PBXGroup;
 			children = (
+				5B9CC8FA2C25E3B2004E7A72 /* Models */,
 				5B9CC8F22C25E2AC004E7A72 /* Features */,
 				5B9CC8C82C25E222004E7A72 /* ScottishPowerTechnicalTestApp.swift */,
 				5B9CC8CC2C25E223004E7A72 /* Assets.xcassets */,
@@ -144,6 +147,14 @@
 				5B9CC8F82C25E302004E7A72 /* RockTracksListView.swift */,
 			);
 			path = RockTracks;
+			sourceTree = "<group>";
+		};
+		5B9CC8FA2C25E3B2004E7A72 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5B9CC8FB2C25E3C8004E7A72 /* TracksResponse.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,6 +290,7 @@
 				5B9CC8F92C25E302004E7A72 /* RockTracksListView.swift in Sources */,
 				5B9CC8C92C25E222004E7A72 /* ScottishPowerTechnicalTestApp.swift in Sources */,
 				5B9CC8F72C25E2F1004E7A72 /* RockTracksListViewModel.swift in Sources */,
+				5B9CC8FC2C25E3C8004E7A72 /* TracksResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
