@@ -8,11 +8,18 @@
 import SwiftUI
 
 struct RockTracksListView: View {
+    
+    @ObservedObject var viewModel: RockTracksListViewModel
+    
+    init(viewModel: RockTracksListViewModel) {
+        self.viewModel = viewModel
+    }
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Test")
     }
 }
 
 #Preview {
-    RockTracksListView()
+    RockTracksListView(viewModel: .init())
 }

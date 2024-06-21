@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct TracksResponse: Decodable {
+struct TracksResponse: Decodable, Equatable, Hashable {
     
     let results: [Track]
     
