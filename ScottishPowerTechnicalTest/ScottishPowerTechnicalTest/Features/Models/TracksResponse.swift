@@ -15,7 +15,7 @@ struct TracksResponse: Decodable, Equatable, Hashable {
     struct Track: Decodable, Equatable, Hashable {
         let artistName: String
         let trackName: String
-        let trackPrice: Float
+        let trackPrice: CurrencyAmount
         let artworkUrl60: URL
         let artworkUrl30: URL
         let releaseDate: Date

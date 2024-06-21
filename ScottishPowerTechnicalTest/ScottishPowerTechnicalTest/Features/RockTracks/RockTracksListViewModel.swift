@@ -13,9 +13,7 @@ class RockTracksListViewModel: ObservableObject {
     
     var navigationTitle: String { "Rock Tracks " }
     @Published var sections: [RockTracksListViewModel.Section] = []
-    
-    // MARK: - Properties (Private)
-        
+            
     var viewState: ViewState {
         didSet {
             DispatchQueue.main.async{
@@ -23,10 +21,15 @@ class RockTracksListViewModel: ObservableObject {
             }
         }
     }
+    
+    // MARK: - Properties (Private)
+    
+    private let apiClient: MusicApiClient
             
     // MARK: Initializer
     
-    init() {
+    init(apiClient: MusicApiClient = MusicClient()) {
+        self.apiClient = apiClient
         self.viewState = .downloadingTrackList
     }
     
@@ -43,7 +46,21 @@ class RockTracksListViewModel: ObservableObject {
     // MARK: - Private
     
     private func downloadViewState() {
-        self.viewState = .displaying(tracks: [.init(artistName: "1", trackName: "2", trackPrice: 10.00, artworkUrl60: URL(string: "https://www.google.com")!, artworkUrl30: URL(string: "https://www.google.com")!, releaseDate: Date(), trackTimeMillis: 1000, trackViewUrl: URL(string: "https://www.google.com")!)])
+        self.viewState = .downloadingTrackList
+        
+        self.apiClient.rockTrackList { result in
+            switch result {
+            case .success(let tracks):
+                let tracksSorted = tracks.sorted { firstTrack, secondTrack in
+                    firstTrack.releaseDate < secondTrack.releaseDate
+                }
+                
+                self.viewState = .displaying(tracks: tracksSorted)
+                
+            case .failure(let _):
+                self.viewState = .error
+            }
+        }
     }
     
     private func updateViewState() {
@@ -54,13 +71,17 @@ class RockTracksListViewModel: ObservableObject {
                     .loading
                 ])
             ]
-
+            
         case .displaying(let tracks):
-            self.sections = [
-                .init(rows: tracks.compactMap {
-                    .track(imageUrl: $0.artworkUrl30, trackName: $0.trackName, artistName: $0.artistName, price: $0.trackPrice.description, track: $0)
-                })
-            ]
+            self.sections = tracks.compactMap {
+                .init(rows: [
+                    .track(imageUrl: $0.artworkUrl30,
+                           trackName: $0.trackName,
+                           artistName: $0.artistName,
+                           price: $0.trackPrice.formattedAmount(),
+                           track: $0)
+                ])
+            }
             
         case .error:
             self.sections = [
