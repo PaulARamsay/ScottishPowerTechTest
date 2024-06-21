@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct TracksResponse: Decodable, Equatable, Hashable {
+struct TracksListResponse: Decodable, Equatable, Hashable {
     
     let results: [Track]
     
@@ -21,5 +21,13 @@ struct TracksResponse: Decodable, Equatable, Hashable {
         let releaseDate: Date
         let trackTimeMillis: Int
         let trackViewUrl: URL
+        
+        /// Get a custom URL for a track image of any size
+        /// - Parameter size: the width and height for the image track image URL.
+        /// - Returns: a URL for the image.
+        func modifiedImageUrlWith(size: Int) -> URL {
+            let modifiedUrl = self.artworkUrl30.deletingLastPathComponent()
+            return modifiedUrl.appendingPathComponent("\(size)x\(size)bb.jpg")
+        }
     }
 }

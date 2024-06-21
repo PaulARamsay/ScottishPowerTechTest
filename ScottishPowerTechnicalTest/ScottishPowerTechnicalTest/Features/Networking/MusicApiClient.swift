@@ -8,7 +8,7 @@
 import Foundation
 
 protocol MusicApiClient {
-    func rockTrackList(completion: @escaping (NetworkRequestResult<[TracksResponse.Track]>) -> Void)
+    func rockTrackList(completion: @escaping (NetworkRequestResult<[TracksListResponse.Track]>) -> Void)
 }
 
 enum NetworkRequestResult<T: Decodable> {
@@ -23,7 +23,7 @@ enum FailureReason {
 
 class MusicClient: MusicApiClient {
     
-    func rockTrackList(completion: @escaping (NetworkRequestResult<[TracksResponse.Track]>) -> Void) {
+    func rockTrackList(completion: @escaping (NetworkRequestResult<[TracksListResponse.Track]>) -> Void) {
 
         let task = URLSession.shared.dataTask(with: .init(url: Endpoints.rockTrackList)) { data, response, error in
             if let data = data {
@@ -31,10 +31,10 @@ class MusicClient: MusicApiClient {
                 let decoder = JSONDecoder()
                 decoder.dateDecodingStrategy = .iso8601
                 do {
-                    let model = try decoder.decode(TracksResponse.self, from: data)
+                    let model = try decoder.decode(TracksListResponse.self, from: data)
                     completion(.success(model.results))
-                } catch let error {
-                    completion(.failure(reason: .networkRequestFailure))
+                } catch {
+                    completion(.failure(reason: .decodeFailure))
                 }
                 
             } else {

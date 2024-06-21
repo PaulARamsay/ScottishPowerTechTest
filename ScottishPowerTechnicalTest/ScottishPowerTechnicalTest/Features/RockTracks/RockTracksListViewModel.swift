@@ -57,7 +57,7 @@ class RockTracksListViewModel: ObservableObject {
                 
                 self.viewState = .displaying(tracks: tracksSorted)
                 
-            case .failure(let _):
+            case .failure:
                 self.viewState = .error
             }
         }
@@ -75,7 +75,7 @@ class RockTracksListViewModel: ObservableObject {
         case .displaying(let tracks):
             self.sections = tracks.compactMap {
                 .init(rows: [
-                    .track(imageUrl: $0.artworkUrl30,
+                    .track(imageUrl: $0.modifiedImageUrlWith(size: 100),
                            trackName: $0.trackName,
                            artistName: $0.artistName,
                            price: $0.trackPrice.formattedAmount(),
@@ -106,13 +106,13 @@ extension RockTracksListViewModel {
     enum Row {
         case loading
         case unableToLoadTracksList(bodyText: String, systemImageName: String, buttonTitle: String)
-        case track(imageUrl: URL, trackName: String, artistName: String, price: String, track: TracksResponse.Track)
+        case track(imageUrl: URL, trackName: String, artistName: String, price: String, track: TracksListResponse.Track)
     }
     
     enum ViewState: Equatable {
         case error
         case downloadingTrackList
-        case displaying(tracks: [TracksResponse.Track])
+        case displaying(tracks: [TracksListResponse.Track])
     }
 }
 

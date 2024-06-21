@@ -145,6 +145,7 @@
 		5B9CC8F22C25E2AC004E7A72 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				5B9CC9182C25F51E004E7A72 /* Extensions */,
 				5B9CC9152C25EE3B004E7A72 /* Models */,
 				5B9CC90E2C25ED58004E7A72 /* Networking */,
 				5B9CC8F32C25E2BE004E7A72 /* RockTracks */,
@@ -194,6 +195,13 @@
 				5B9CC9162C25EE4C004E7A72 /* CurrencyAmount.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		5B9CC9182C25F51E004E7A72 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
