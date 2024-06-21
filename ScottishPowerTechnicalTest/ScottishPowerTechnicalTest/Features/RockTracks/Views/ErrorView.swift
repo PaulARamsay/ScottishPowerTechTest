@@ -7,12 +7,16 @@
 
 import SwiftUI
 
+// MARK: - View
+
 struct ErrorView: View {
     
     let bodyText: String
     let systemImageName: String
     let buttonTitle: String
     let didTapRetry: () -> Void
+    
+    // MARK: - View Body
     
     var body: some View {
         HStack {
@@ -31,6 +35,8 @@ struct ErrorView: View {
         }
     }
 }
+
+// MARK: - Preview
 
 #Preview {
     List {

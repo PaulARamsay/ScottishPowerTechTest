@@ -51,6 +51,8 @@ struct TrackView: View {
     }
 }
 
+// MARK: - Preview
+
 #Preview {
     List {
         TrackView(imageUrl: URL(string: "https://placehold.co/600x400")!,

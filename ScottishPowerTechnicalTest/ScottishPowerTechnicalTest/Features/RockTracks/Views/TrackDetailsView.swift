@@ -9,12 +9,16 @@ import SwiftUI
 
 struct TrackDetailsView: View {
     
+    // MARK: - Properties
+    
     let trackName: String
     let artistName: String
     let price: String
     let duration: String
     let durationAccessibilityLabel: String
     let releaseDate: String
+    
+    // Mark: - View Body
     
     var body: some View {
         VStack(alignment: .leading, spacing: 5) {
@@ -31,11 +35,15 @@ struct TrackDetailsView: View {
     }
 }
 
+// MARK: - Preview
+
 #Preview {
-    TrackDetailsView(trackName: "Twelve parsecs",
-                     artistName: "Han Solo",
-                     price: "3.55",
-                     duration: "55 seconds",
-                     durationAccessibilityLabel: "3 minutes, 4 seconds",
-                     releaseDate: "16/08/1995")
+    List {
+        TrackDetailsView(trackName: "Twelve parsecs",
+                         artistName: "Han Solo",
+                         price: "3.55",
+                         duration: "55 seconds",
+                         durationAccessibilityLabel: "3 minutes, 4 seconds",
+                         releaseDate: "16/08/1995")
+    }
 }

@@ -11,6 +11,8 @@ protocol MusicApiClient {
     func rockTrackList(completion: @escaping (NetworkRequestResult<[TracksListResponse.Track]>) -> Void)
 }
 
+/// NetworkRequestResult,
+/// returns success with the decodable type, or a failure with a specific failure reason
 enum NetworkRequestResult<T: Decodable> {
     case success(T)
     case failure(reason: FailureReason)

@@ -8,13 +8,21 @@
 import Foundation
 import SwiftUI
 
+// MARK: - View
+
 struct RockTrackDetailsView: View {
     
+    // MARK: - Properties (Private)
+    
     @ObservedObject var viewModel: RockTrackDetailsViewModel
+    
+    // MARK: - Initializer
     
     init(viewModel: RockTrackDetailsViewModel) {
         self.viewModel = viewModel
     }
+    
+    // MARK: - View
     
     var body: some View {
         VStack {
@@ -26,6 +34,8 @@ struct RockTrackDetailsView: View {
         }
         .navigationTitle(self.viewModel.navigationTitle)
     }
+    
+    // MARK: - ViewBuilders
     
     @ViewBuilder
     func viewForSection(_ section: RockTrackDetailsViewModel.Section) -> some View {
@@ -50,6 +60,8 @@ struct RockTrackDetailsView: View {
         }
     }
 }
+
+// MARK: - Preview
 
 #Preview {
     RockTrackDetailsView(viewModel: .init(selectedTrack: .init(artistName: "Darth Vadar",

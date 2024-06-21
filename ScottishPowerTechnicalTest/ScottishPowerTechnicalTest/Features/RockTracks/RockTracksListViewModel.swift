@@ -41,7 +41,7 @@ class RockTracksListViewModel: ObservableObject {
         self.downloadViewState()
     }
     
-    // MARK: - Private
+    // MARK: - Helper Functions
     
     private func downloadViewState() {
         self.viewState = .downloadingTrackList

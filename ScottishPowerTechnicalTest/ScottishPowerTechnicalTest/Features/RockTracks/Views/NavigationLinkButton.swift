@@ -8,12 +8,18 @@
 import Foundation
 import SwiftUI
 
+// MARK: - View
+
 struct NavigationLinkButton: View {
+    
+    // MARK: - Properties (Public)
     
     @Environment(\.openURL) var openURL
     
     let buttonTitle: String
     let url: URL
+    
+    // MARK: - View Body
     
     var body: some View{
         Button {
@@ -28,7 +34,11 @@ struct NavigationLinkButton: View {
     }
 }
 
+// MARK: - Preview
+
 #Preview {
-    NavigationLinkButton(buttonTitle: "Let's go", url: URL(string: "http://www.google.com")!)
+    List {
+        NavigationLinkButton(buttonTitle: "Let's go", url: URL(string: "http://www.google.com")!)
+    }
 }
 

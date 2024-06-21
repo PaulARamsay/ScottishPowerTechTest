@@ -8,10 +8,14 @@
 import Foundation
 import SwiftUI
 
+// MARK: - View
+
 struct DynamicImageView: View {
     
-    let imageUrl: URL
+    // MARK: - Properties
     
+    let imageUrl: URL
+        
     var body: some View {
         VStack {
             Spacer()
@@ -27,10 +31,13 @@ struct DynamicImageView: View {
             }
             Spacer()
         }
-        
     }
 }
 
+// MARK: - Preview
+
 #Preview {
-    DynamicImageView(imageUrl: URL(string: "https://placehold.co/600x400")!)
+    List {
+        DynamicImageView(imageUrl: URL(string: "https://placehold.co/600x400.jpg")!)
+    }
 }
