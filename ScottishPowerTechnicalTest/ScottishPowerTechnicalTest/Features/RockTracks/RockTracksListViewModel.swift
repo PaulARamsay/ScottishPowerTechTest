@@ -43,7 +43,7 @@ class RockTracksListViewModel: ObservableObject {
     // MARK: - Private
     
     private func downloadViewState() {
-        self.viewState = .downloadingTrackList
+        self.viewState = .displaying(tracks: [.init(artistName: "1", trackName: "2", trackPrice: 10.00, artworkUrl60: URL(string: "https://www.google.com")!, artworkUrl30: URL(string: "https://www.google.com")!, releaseDate: Date(), trackTimeMillis: 1000, trackViewUrl: URL(string: "https://www.google.com")!)])
     }
     
     private func updateViewState() {
@@ -57,11 +57,9 @@ class RockTracksListViewModel: ObservableObject {
 
         case .displaying(let tracks):
             self.sections = [
-                .init(rows: [.track(imageUrl: URL(string: "")!,
-                                    trackName: "Test",
-                                    artistName: "Test",
-                                    price: "10",
-                                    track: .init(artistName: "", trackName: "", trackPrice: 10, artworkUrl60: URL(string: "")!, artworkUrl30: URL(string: "")!, releaseDate: Date(), trackTimeMillis: 10, trackViewUrl: URL(string: "")!))])
+                .init(rows: tracks.compactMap {
+                    .track(imageUrl: $0.artworkUrl30, trackName: $0.trackName, artistName: $0.artistName, price: $0.trackPrice.description, track: $0)
+                })
             ]
             
         case .error:

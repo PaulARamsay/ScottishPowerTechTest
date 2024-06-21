@@ -44,13 +44,20 @@ struct RockTracksListView: View {
     func viewForRow(_ row: RockTracksListViewModel.Row) -> some View {
         switch row {
         case .loading:
-            Text("Loading")
+            LoadingView()
             
         case .track(let imageUrl, let trackName, let artistName, let price, let thisTrack):
-            Text("track")
-
+            NavigationLink {
+                Text("test")
+            } label: {
+                TrackView(imageUrl: imageUrl, trackName: trackName, artistName: artistName, price: price)
+            }
+            
         case .unableToLoadTracksList(let bodyText, let systemImage, let buttonTitle):
-            Text("unable to load")
+            ErrorView(bodyText: bodyText, systemImageName: systemImage, buttonTitle: buttonTitle) {
+                self.viewModel.didTapRetry()
+
+            }
         }
     }
 }
