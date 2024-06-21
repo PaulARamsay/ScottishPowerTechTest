@@ -38,7 +38,16 @@ struct RockTrackDetailsView: View {
     
     @ViewBuilder
     func viewForRow(_ row: RockTrackDetailsViewModel.Row) -> some View {
-        Text("Row")
+        switch row {
+        case .about(let trackName, let artistName, let price, let duration, let releaseDate):
+            TrackDetailsView(trackName: trackName, artistName: artistName, price: price, duration: duration, releaseDate: releaseDate)
+
+        case .headerImage(let imageUrl):
+            DynamicImageView(imageUrl: imageUrl)
+            
+        case .actionButton(let buttonTitle, let url):
+            NavigationLinkButton(buttonTitle: buttonTitle, url: url)
+        }
     }
 }
 
