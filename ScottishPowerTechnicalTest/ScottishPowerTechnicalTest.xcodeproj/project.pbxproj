@@ -24,6 +24,7 @@
 		5B9CC91B2C25F91F004E7A72 /* Track+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9CC9192C25F91F004E7A72 /* Track+Extensions.swift */; };
 		5B9CC91D2C25F932004E7A72 /* RockTracksViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9CC91C2C25F932004E7A72 /* RockTracksViewModelTests.swift */; };
 		5B9CC9222C25F996004E7A72 /* MockMusicClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9CC9212C25F996004E7A72 /* MockMusicClient.swift */; };
+		5B9CC9252C2606EA004E7A72 /* NavigationLink+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9CC9242C2606EA004E7A72 /* NavigationLink+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		5B9CC9192C25F91F004E7A72 /* Track+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Track+Extensions.swift"; sourceTree = "<group>"; };
 		5B9CC91C2C25F932004E7A72 /* RockTracksViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RockTracksViewModelTests.swift; sourceTree = "<group>"; };
 		5B9CC9212C25F996004E7A72 /* MockMusicClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockMusicClient.swift; sourceTree = "<group>"; };
+		5B9CC9242C2606EA004E7A72 /* NavigationLink+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NavigationLink+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +210,7 @@
 		5B9CC9182C25F51E004E7A72 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				5B9CC9242C2606EA004E7A72 /* NavigationLink+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B9CC90B2C25EC06004E7A72 /* ErrorView.swift in Sources */,
+				5B9CC9252C2606EA004E7A72 /* NavigationLink+Extensions.swift in Sources */,
 				5B9CC9172C25EE4C004E7A72 /* CurrencyAmount.swift in Sources */,
 				5B9CC9102C25ED6B004E7A72 /* MusicApiClient.swift in Sources */,
 				5B9CC8F92C25E302004E7A72 /* RockTracksListView.swift in Sources */,
