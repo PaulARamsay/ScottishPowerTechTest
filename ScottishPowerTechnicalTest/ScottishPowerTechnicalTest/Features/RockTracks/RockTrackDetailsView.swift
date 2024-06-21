@@ -39,8 +39,8 @@ struct RockTrackDetailsView: View {
     @ViewBuilder
     func viewForRow(_ row: RockTrackDetailsViewModel.Row) -> some View {
         switch row {
-        case .about(let trackName, let artistName, let price, let duration, let releaseDate):
-            TrackDetailsView(trackName: trackName, artistName: artistName, price: price, duration: duration, releaseDate: releaseDate)
+        case .about(let trackName, let artistName, let price, let duration, let durationAccessibilityLabel, let releaseDate):
+            TrackDetailsView(trackName: trackName, artistName: artistName, price: price, duration: duration, durationAccessibilityLabel: durationAccessibilityLabel, releaseDate: releaseDate)
 
         case .headerImage(let imageUrl):
             DynamicImageView(imageUrl: imageUrl)

@@ -30,6 +30,8 @@
 		5B9CC92C2C260FF5004E7A72 /* NavigationLinkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9CC92A2C260FF5004E7A72 /* NavigationLinkButton.swift */; };
 		5B9CC92D2C260FF5004E7A72 /* TrackDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9CC92B2C260FF5004E7A72 /* TrackDetailsView.swift */; };
 		5B9CC92F2C260FFA004E7A72 /* DynamicImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9CC92E2C260FFA004E7A72 /* DynamicImageView.swift */; };
+		5B9CC9322C261455004E7A72 /* TimeInterval+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9CC9302C261455004E7A72 /* TimeInterval+Extensions.swift */; };
+		5B9CC9332C261455004E7A72 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9CC9312C261455004E7A72 /* Int+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,8 @@
 		5B9CC92A2C260FF5004E7A72 /* NavigationLinkButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationLinkButton.swift; sourceTree = "<group>"; };
 		5B9CC92B2C260FF5004E7A72 /* TrackDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackDetailsView.swift; sourceTree = "<group>"; };
 		5B9CC92E2C260FFA004E7A72 /* DynamicImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicImageView.swift; sourceTree = "<group>"; };
+		5B9CC9302C261455004E7A72 /* TimeInterval+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Extensions.swift"; sourceTree = "<group>"; };
+		5B9CC9312C261455004E7A72 /* Int+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +230,8 @@
 			isa = PBXGroup;
 			children = (
 				5B9CC9242C2606EA004E7A72 /* NavigationLink+Extensions.swift */,
+				5B9CC9312C261455004E7A72 /* Int+Extensions.swift */,
+				5B9CC9302C261455004E7A72 /* TimeInterval+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -380,10 +386,12 @@
 				5B9CC9292C260751004E7A72 /* RockTrackDetailsViewModel.swift in Sources */,
 				5B9CC92D2C260FF5004E7A72 /* TrackDetailsView.swift in Sources */,
 				5B9CC90B2C25EC06004E7A72 /* ErrorView.swift in Sources */,
+				5B9CC9332C261455004E7A72 /* Int+Extensions.swift in Sources */,
 				5B9CC9252C2606EA004E7A72 /* NavigationLink+Extensions.swift in Sources */,
 				5B9CC9172C25EE4C004E7A72 /* CurrencyAmount.swift in Sources */,
 				5B9CC9102C25ED6B004E7A72 /* MusicApiClient.swift in Sources */,
 				5B9CC8F92C25E302004E7A72 /* RockTracksListView.swift in Sources */,
+				5B9CC9322C261455004E7A72 /* TimeInterval+Extensions.swift in Sources */,
 				5B9CC90D2C25EC06004E7A72 /* TrackView.swift in Sources */,
 				5B9CC92C2C260FF5004E7A72 /* NavigationLinkButton.swift in Sources */,
 				5B9CC8C92C25E222004E7A72 /* ScottishPowerTechnicalTestApp.swift in Sources */,

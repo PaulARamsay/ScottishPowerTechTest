@@ -13,6 +13,7 @@ struct TrackDetailsView: View {
     let artistName: String
     let price: String
     let duration: String
+    let durationAccessibilityLabel: String
     let releaseDate: String
     
     var body: some View {
@@ -23,6 +24,7 @@ struct TrackDetailsView: View {
                 .bold()
             Text(self.price)
             Text(self.duration)
+                .accessibilityLabel(self.durationAccessibilityLabel)
                 .padding(.top)
             Text(self.releaseDate)
         }
@@ -34,5 +36,6 @@ struct TrackDetailsView: View {
                      artistName: "Han Solo",
                      price: "3.55",
                      duration: "55 seconds",
+                     durationAccessibilityLabel: "3 minutes, 4 seconds",
                      releaseDate: "16/08/1995")
 }

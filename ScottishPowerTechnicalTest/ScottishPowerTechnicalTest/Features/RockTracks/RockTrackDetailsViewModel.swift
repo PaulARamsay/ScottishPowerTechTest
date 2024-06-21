@@ -33,8 +33,9 @@ class RockTrackDetailsViewModel: ObservableObject, RockTrackDetailsViewModeling 
                 .about(trackName: self.selectedTrack.trackName,
                        artist: self.selectedTrack.artistName,
                        price: self.selectedTrack.trackPrice.formattedAmount(),
-                       duration: self.selectedTrack.trackTimeMillis.description,
-                       releaseDate: self.selectedTrack.releaseDate.description),
+                       duration: self.selectedTrack.trackTimeFormatted,
+                       durationAccessibilityLabel: self.selectedTrack.trackTimeAccessibilityLabel,
+                       releaseDate: self.selectedTrack.releaseDateFormatted),
                 .actionButton(buttonTitle: "See more details", findOutMoreUrl: self.selectedTrack.trackViewUrl)
             ])
         ]
@@ -51,7 +52,7 @@ extension RockTrackDetailsViewModel {
     
     enum Row {
         case headerImage(imageUrl: URL)
-        case about(trackName: String, artist: String, price: String, duration: String, releaseDate: String)
+        case about(trackName: String, artist: String, price: String, duration: String, durationAccessibilityLabel: String, releaseDate: String)
         case actionButton(buttonTitle: String, findOutMoreUrl: URL)
     }
 }
