@@ -71,7 +71,11 @@ class RockTracksListViewModel: ObservableObject {
             ]
             
         case .displaying(let tracks):
-            self.sections = tracks.compactMap {
+            let tracksSorted = tracks.sorted { firstTrack, secondTrack in
+                firstTrack.releaseDate > secondTrack.releaseDate
+            }
+                
+            self.sections = tracksSorted.compactMap {
                 .init(rows: [
                     .track(imageUrl: $0.modifiedImageUrlWith(size: 100),
                            trackName: $0.trackName,
@@ -80,7 +84,7 @@ class RockTracksListViewModel: ObservableObject {
                            track: $0)
                 ])
             }
-            
+    
         case .error:
             self.sections = [
                 .init(rows: [
