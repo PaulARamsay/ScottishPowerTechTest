@@ -25,6 +25,8 @@
 		5B9CC91D2C25F932004E7A72 /* RockTracksViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9CC91C2C25F932004E7A72 /* RockTracksViewModelTests.swift */; };
 		5B9CC9222C25F996004E7A72 /* MockMusicClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9CC9212C25F996004E7A72 /* MockMusicClient.swift */; };
 		5B9CC9252C2606EA004E7A72 /* NavigationLink+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9CC9242C2606EA004E7A72 /* NavigationLink+Extensions.swift */; };
+		5B9CC9272C26071A004E7A72 /* RockTrackDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9CC9262C26071A004E7A72 /* RockTrackDetailsView.swift */; };
+		5B9CC9292C260751004E7A72 /* RockTrackDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9CC9282C260751004E7A72 /* RockTrackDetailsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,8 @@
 		5B9CC91C2C25F932004E7A72 /* RockTracksViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RockTracksViewModelTests.swift; sourceTree = "<group>"; };
 		5B9CC9212C25F996004E7A72 /* MockMusicClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockMusicClient.swift; sourceTree = "<group>"; };
 		5B9CC9242C2606EA004E7A72 /* NavigationLink+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NavigationLink+Extensions.swift"; sourceTree = "<group>"; };
+		5B9CC9262C26071A004E7A72 /* RockTrackDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RockTrackDetailsView.swift; sourceTree = "<group>"; };
+		5B9CC9282C260751004E7A72 /* RockTrackDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RockTrackDetailsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +173,8 @@
 				5B9CC8FD2C25EA32004E7A72 /* Views */,
 				5B9CC8F62C25E2F1004E7A72 /* RockTracksListViewModel.swift */,
 				5B9CC8F82C25E302004E7A72 /* RockTracksListView.swift */,
+				5B9CC9282C260751004E7A72 /* RockTrackDetailsViewModel.swift */,
+				5B9CC9262C26071A004E7A72 /* RockTrackDetailsView.swift */,
 			);
 			path = RockTracks;
 			sourceTree = "<group>";
@@ -362,6 +368,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B9CC9292C260751004E7A72 /* RockTrackDetailsViewModel.swift in Sources */,
 				5B9CC90B2C25EC06004E7A72 /* ErrorView.swift in Sources */,
 				5B9CC9252C2606EA004E7A72 /* NavigationLink+Extensions.swift in Sources */,
 				5B9CC9172C25EE4C004E7A72 /* CurrencyAmount.swift in Sources */,
@@ -369,6 +376,7 @@
 				5B9CC8F92C25E302004E7A72 /* RockTracksListView.swift in Sources */,
 				5B9CC90D2C25EC06004E7A72 /* TrackView.swift in Sources */,
 				5B9CC8C92C25E222004E7A72 /* ScottishPowerTechnicalTestApp.swift in Sources */,
+				5B9CC9272C26071A004E7A72 /* RockTrackDetailsView.swift in Sources */,
 				5B9CC8F72C25E2F1004E7A72 /* RockTracksListViewModel.swift in Sources */,
 				5B9CC8FC2C25E3C8004E7A72 /* TracksResponse.swift in Sources */,
 				5B9CC90C2C25EC06004E7A72 /* LoadingView.swift in Sources */,
