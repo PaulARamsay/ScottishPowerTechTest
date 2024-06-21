@@ -26,19 +26,21 @@ class MusicClient: MusicApiClient {
     func rockTrackList(completion: @escaping (NetworkRequestResult<[TracksListResponse.Track]>) -> Void) {
 
         let task = URLSession.shared.dataTask(with: .init(url: Endpoints.rockTrackList)) { data, response, error in
-            if let data = data {
-                
-                let decoder = JSONDecoder()
-                decoder.dateDecodingStrategy = .iso8601
-                do {
-                    let model = try decoder.decode(TracksListResponse.self, from: data)
-                    completion(.success(model.results))
-                } catch {
-                    completion(.failure(reason: .decodeFailure))
+            DispatchQueue.main.async {
+                if let data = data {
+                    
+                    let decoder = JSONDecoder()
+                    decoder.dateDecodingStrategy = .iso8601
+                    do {
+                        let model = try decoder.decode(TracksListResponse.self, from: data)
+                        completion(.success(model.results))
+                    } catch {
+                        completion(.failure(reason: .decodeFailure))
+                    }
+                    
+                } else {
+                    completion(.failure(reason: .networkRequestFailure))
                 }
-                
-            } else {
-                completion(.failure(reason: .networkRequestFailure))
             }
         }
         

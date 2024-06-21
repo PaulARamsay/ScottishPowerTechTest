@@ -11,14 +11,12 @@ class RockTracksListViewModel: ObservableObject {
         
     // MARK: - Properties (Public)
     
-    var navigationTitle: String { "Rock Tracks " }
+    let navigationTitle = "Rock Tracks"
     @Published var sections: [RockTracksListViewModel.Section] = []
             
     var viewState: ViewState {
         didSet {
-            DispatchQueue.main.async{
-                self.updateViewState()
-            }
+            self.updateViewState()
         }
     }
     
