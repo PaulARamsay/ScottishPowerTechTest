@@ -6,8 +6,8 @@
 //
 
 import Foundation
-
 import XCTest
+
 @testable import ScottishPowerTechnicalTest
 class RockTracksViewModelTests: XCTestCase {
     

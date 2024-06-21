@@ -9,14 +9,18 @@ import Foundation
 
 class CurrencyAmount: Decodable, Equatable {
     
+    // MARK: - Properties (Private)
+    
     private let underlyingValue: Double
+    
+    // MARK: - Initializer
     
     required init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
         let double = try container.decode(Double.self)
         self.underlyingValue = double
     }
-    
+        
     init(underlyingValue: Double) {
         self.underlyingValue = underlyingValue
     }
@@ -29,9 +33,13 @@ class CurrencyAmount: Decodable, Equatable {
         hasher.combine(self.underlyingValue)
     }
     
+    /// Returns the currency amount as a formatted amount eg: `£10.55`
+    /// - Returns: String value
     func formattedAmount() -> String {
         return String(format: "£%.02f", self.underlyingValue)
     }
 }
+
+// MARK: - Hashable Conformance
 
 extension CurrencyAmount: Hashable {}

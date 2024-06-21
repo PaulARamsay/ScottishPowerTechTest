@@ -32,6 +32,11 @@
 		5B9CC92F2C260FFA004E7A72 /* DynamicImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9CC92E2C260FFA004E7A72 /* DynamicImageView.swift */; };
 		5B9CC9322C261455004E7A72 /* TimeInterval+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9CC9302C261455004E7A72 /* TimeInterval+Extensions.swift */; };
 		5B9CC9332C261455004E7A72 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9CC9312C261455004E7A72 /* Int+Extensions.swift */; };
+		5B9CC9352C2616DA004E7A72 /* RockTrackDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9CC9342C2616DA004E7A72 /* RockTrackDetailsViewModelTests.swift */; };
+		5B9CC9372C261972004E7A72 /* IntTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9CC9362C261972004E7A72 /* IntTests.swift */; };
+		5B9CC93A2C261AE8004E7A72 /* TimeIntervalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9CC9392C261AE8004E7A72 /* TimeIntervalTests.swift */; };
+		5B9CC9422C2621E5004E7A72 /* CurrencyAmountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9CC9412C2621E5004E7A72 /* CurrencyAmountTests.swift */; };
+		5B9CC9442C262332004E7A72 /* TrackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9CC9432C262332004E7A72 /* TrackTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +85,11 @@
 		5B9CC92E2C260FFA004E7A72 /* DynamicImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicImageView.swift; sourceTree = "<group>"; };
 		5B9CC9302C261455004E7A72 /* TimeInterval+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Extensions.swift"; sourceTree = "<group>"; };
 		5B9CC9312C261455004E7A72 /* Int+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
+		5B9CC9342C2616DA004E7A72 /* RockTrackDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RockTrackDetailsViewModelTests.swift; sourceTree = "<group>"; };
+		5B9CC9362C261972004E7A72 /* IntTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntTests.swift; sourceTree = "<group>"; };
+		5B9CC9392C261AE8004E7A72 /* TimeIntervalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIntervalTests.swift; sourceTree = "<group>"; };
+		5B9CC9412C2621E5004E7A72 /* CurrencyAmountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyAmountTests.swift; sourceTree = "<group>"; };
+		5B9CC9432C262332004E7A72 /* TrackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,11 +140,12 @@
 		5B9CC8C72C25E222004E7A72 /* ScottishPowerTechnicalTest */ = {
 			isa = PBXGroup;
 			children = (
-				5B9CC8FA2C25E3B2004E7A72 /* Models */,
+				5B9CC9182C25F51E004E7A72 /* Extensions */,
 				5B9CC8F22C25E2AC004E7A72 /* Features */,
-				5B9CC8C82C25E222004E7A72 /* ScottishPowerTechnicalTestApp.swift */,
-				5B9CC8CC2C25E223004E7A72 /* Assets.xcassets */,
+				5B9CC9152C25EE3B004E7A72 /* Models */,
 				5B9CC8CE2C25E223004E7A72 /* Preview Content */,
+				5B9CC8CC2C25E223004E7A72 /* Assets.xcassets */,
+				5B9CC8C82C25E222004E7A72 /* ScottishPowerTechnicalTestApp.swift */,
 			);
 			path = ScottishPowerTechnicalTest;
 			sourceTree = "<group>";
@@ -150,8 +161,10 @@
 		5B9CC8D82C25E224004E7A72 /* ScottishPowerTechnicalTestTests */ = {
 			isa = PBXGroup;
 			children = (
+				5B9CC9382C261981004E7A72 /* ExtensionTests */,
 				5B9CC91E2C25F934004E7A72 /* Features */,
 				5B9CC91A2C25F91F004E7A72 /* MockModels */,
+				5B9CC9402C262176004E7A72 /* ModalTests */,
 				5B9CC8D92C25E224004E7A72 /* ScottishPowerTechnicalTestTests.swift */,
 			);
 			path = ScottishPowerTechnicalTestTests;
@@ -169,8 +182,6 @@
 		5B9CC8F22C25E2AC004E7A72 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				5B9CC9182C25F51E004E7A72 /* Extensions */,
-				5B9CC9152C25EE3B004E7A72 /* Models */,
 				5B9CC90E2C25ED58004E7A72 /* Networking */,
 				5B9CC8F32C25E2BE004E7A72 /* RockTracks */,
 			);
@@ -187,13 +198,6 @@
 				5B9CC9262C26071A004E7A72 /* RockTrackDetailsView.swift */,
 			);
 			path = RockTracks;
-			sourceTree = "<group>";
-		};
-		5B9CC8FA2C25E3B2004E7A72 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		5B9CC8FD2C25EA32004E7A72 /* Views */ = {
@@ -223,7 +227,8 @@
 				5B9CC8FB2C25E3C8004E7A72 /* TracksResponse.swift */,
 				5B9CC9162C25EE4C004E7A72 /* CurrencyAmount.swift */,
 			);
-			path = Models;
+			name = Models;
+			path = Features/Models;
 			sourceTree = "<group>";
 		};
 		5B9CC9182C25F51E004E7A72 /* Extensions */ = {
@@ -249,8 +254,27 @@
 			isa = PBXGroup;
 			children = (
 				5B9CC91C2C25F932004E7A72 /* RockTracksViewModelTests.swift */,
+				5B9CC9342C2616DA004E7A72 /* RockTrackDetailsViewModelTests.swift */,
 			);
 			path = Features;
+			sourceTree = "<group>";
+		};
+		5B9CC9382C261981004E7A72 /* ExtensionTests */ = {
+			isa = PBXGroup;
+			children = (
+				5B9CC9362C261972004E7A72 /* IntTests.swift */,
+				5B9CC9392C261AE8004E7A72 /* TimeIntervalTests.swift */,
+			);
+			path = ExtensionTests;
+			sourceTree = "<group>";
+		};
+		5B9CC9402C262176004E7A72 /* ModalTests */ = {
+			isa = PBXGroup;
+			children = (
+				5B9CC9412C2621E5004E7A72 /* CurrencyAmountTests.swift */,
+				5B9CC9432C262332004E7A72 /* TrackTests.swift */,
+			);
+			path = ModalTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -407,9 +431,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B9CC93A2C261AE8004E7A72 /* TimeIntervalTests.swift in Sources */,
 				5B9CC8DA2C25E224004E7A72 /* ScottishPowerTechnicalTestTests.swift in Sources */,
+				5B9CC9352C2616DA004E7A72 /* RockTrackDetailsViewModelTests.swift in Sources */,
+				5B9CC9442C262332004E7A72 /* TrackTests.swift in Sources */,
 				5B9CC91D2C25F932004E7A72 /* RockTracksViewModelTests.swift in Sources */,
+				5B9CC9372C261972004E7A72 /* IntTests.swift in Sources */,
 				5B9CC9222C25F996004E7A72 /* MockMusicClient.swift in Sources */,
+				5B9CC9422C2621E5004E7A72 /* CurrencyAmountTests.swift in Sources */,
 				5B9CC91B2C25F91F004E7A72 /* Track+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

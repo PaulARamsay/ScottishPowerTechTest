@@ -10,6 +10,7 @@ import SwiftUI
 
 enum NavigationDestination {
 
+    /// Navigates to the RockTrackDetailsView screen
     case trackDetails(TracksListResponse.Track)
     
     @ViewBuilder
@@ -20,5 +21,7 @@ enum NavigationDestination {
         }
     }
 }
+
+// MARK: - Hashable Conformance
 
 extension NavigationDestination: Hashable {}
